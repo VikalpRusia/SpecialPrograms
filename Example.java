@@ -20,12 +20,17 @@ public class Example {
             e.printStackTrace();
             System.out.println("Cannot proceed further");
         }
-        boolean zeroPresent = inputString[0].equals("0");
-        for (int i = (zeroPresent ? 1 : 0); i < inputString.length; i++) {
+        int zeroPresent = 0;
+        for (String s: inputString) {
+            if (Integer.parseInt(s)==0)
+                zeroPresent++;
+
+        }
+        for (int i = zeroPresent; i < inputString.length; i++) {
             length(inputString[i], 1);
         }
-        if (zeroPresent && maxLength == 1 && lessThan > 0) {
-            count++;
+        if (zeroPresent!=0 && maxLength == 1 && lessThan > 0) {
+            count+=zeroPresent;
         }
         System.out.println(count);
 
