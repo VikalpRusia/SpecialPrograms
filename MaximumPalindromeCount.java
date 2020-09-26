@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.stream.IntStream;
 
+// https://www.hackerrank.com/challenges/maximum-palindromes/problem
 class Result {
     static String operationalString;
     static int modulus = 1_00_00_00_007;
